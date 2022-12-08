@@ -1,0 +1,124 @@
+/*
+Table of Contents:
+    General Page Styles
+    Animations
+    Hero
+        Cutouts
+    Footer
+*/
+
+/* General Page Styles */
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes scale-up {
+    0% {
+        translatey(100vh);
+    }
+
+    100% {
+        translatey(0);
+    }
+}
+
+/* hero */
+.s-hero {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #fff6b5;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-portrait {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    background-image: url("../assets/portrait.png");
+    background-size: cover;
+    background-position: center;
+    animation: scale-up 10s backwards;
+    animation-delay: 1s;
+}
+
+.hero-cutout-1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+    background-image: url("../assets/cutout-1.png");
+    background-size: cover;
+    background-position: center;
+    animation: scale-up 10s backwards;
+    animation-delay: 2s;
+}
+
+.hero-cutout-2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    background-image: url("../assets/cutout-2.png");
+    background-size: cover;
+    background-position: center;
+    animation: scale-up 10s backwards;
+    animation-delay: 3s;
+}
+
+.hero-cutout-3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background-image: url("../assets/cutout-3.png");
+    background-size: cover;
+    background-position: center;
+    animation: scale-up 10s backwards;
+    animation-delay: 4s;
+}
+
+.hero-cutout-4 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    background-image: url("../assets/cutout-4.png");
+    background-size: cover;
+    background-position: center;
+    animation: scale-up 10s backwards;
+    animation-delay: 5s;
+}
+
+/* Footer */
+#footer {
+    background-color: #656565;
+    color: #d4d4d4;
+}
+
+#footer a {
+    color: #931324;
+}
