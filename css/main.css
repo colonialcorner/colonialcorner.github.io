@@ -24,11 +24,11 @@ body {
 /* Animations */
 @keyframes scale-up {
     0% {
-        translatey(100vh);
+        opacity: 0;
     }
 
     100% {
-        translatey(0);
+        opacity: 1;
     }
 }
 
@@ -39,8 +39,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff6b5;
-    background-size: cover;
-    background-position: center;
 }
 
 .hero-portrait {
@@ -53,8 +51,8 @@ body {
     background-image: url("../assets/portrait.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 10s backwards;
-    animation-delay: 1s;
+    animation: scale-up 1s ease;
+    animation-delay: 10s;
 }
 
 .hero-cutout-1 {
@@ -67,8 +65,8 @@ body {
     background-image: url("../assets/cutout-1.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 10s backwards;
-    animation-delay: 2s;
+    animation: scale-up 1s ease;
+    animation-delay: 20s;
 }
 
 .hero-cutout-2 {
@@ -81,8 +79,8 @@ body {
     background-image: url("../assets/cutout-2.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 10s backwards;
-    animation-delay: 3s;
+    animation: scale-up 1s ease;
+    animation-delay: 30s;
 }
 
 .hero-cutout-3 {
@@ -95,8 +93,8 @@ body {
     background-image: url("../assets/cutout-3.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 10s backwards;
-    animation-delay: 4s;
+    animation: scale-up 1s ease;
+    animation-delay: 40s;
 }
 
 .hero-cutout-4 {
@@ -109,7 +107,7 @@ body {
     background-image: url("../assets/cutout-4.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 10s backwards;
+    animation: scale-up 10s ease;
     animation-delay: 5s;
 }
 
