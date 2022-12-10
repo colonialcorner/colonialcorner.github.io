@@ -149,10 +149,10 @@ body {
 .hero-text iframe{
     width: 80%;
     aspect-ratio: 16/9;
-    margin: 0;
-    padding: 1rem;
+    margin: 1rem;
+    padding: 0;
     border: 0;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 
 /* Footer */
