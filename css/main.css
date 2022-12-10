@@ -38,6 +38,16 @@ body {
     }
 }
 
+@keyframes slide-right {
+    0% {
+        transform: translatex(-100%);
+    }
+
+    100% {
+        transform: translatex(0);
+    }
+}
+
 /* Hero */
 .s-hero {
     height: 100%;
@@ -192,6 +202,8 @@ body {
     width: 80%;
     margin: auto;
     padding: 0;
+    animation: slide-right 3s ease-in-out backwards;
+    animation-delay: 0.5s;
 }
 
 .hero-text img{
