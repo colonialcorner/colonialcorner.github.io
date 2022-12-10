@@ -3,7 +3,8 @@ Table of Contents:
     General Page Styles
     Animations
     Hero
-        Cutouts
+        Portrait
+        Text
     Footer
 */
 
@@ -12,47 +13,53 @@ html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body {
     margin: 0;
     padding: 0;
-    transition: all 0.3s ease;
 }
 
 /* Animations */
-@keyframes slide-up {
+@keyframes scale-in {
     0% {
-        transform:translatey(10vh);
+        transform: scale(0);
+        padding-bottom: -50%;
+    }
+
+    75% {
+        transform: scale(1.1);
+        padding-bottom: -50%;
     }
 
     100% {
-        transform:translatey(0);
+        transform: scale(1);
     }
 }
 
-/* hero */
+/* Hero */
 .s-hero {
     height: 100vh;
     width: 100vw;
+    max-width: 1400px;
     margin: 0;
     padding: 0;
+    z-index: 1000;
     background-color: #2f615e;
 }
 
+/* Hero Portraits */
 .hero-portrait {
     position: absolute;
-    height: 50%;
-    width: 50%;
+    height: 60%;
+    width: 60%;
     bottom: 0;
     right: 0;
     margin: 0;
-    padding: 10%;
-    background-size: cover;
-    background-position: center;
-    animation: scale-up 1s ease;
-    animation-delay: 10s;
+    padding-bottom: 15%;
+    padding-left: 15%;
+    padding-top: 5%;
 }
 
 .portrait-photo {
@@ -62,11 +69,11 @@ body {
     margin: 0;
     padding: 0;
     z-index: 5;
-    background-image: url("../assets/portrait-half.png");
+    background-image: url("../assets/portrait-quarter.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 1s ease;
-    animation-delay: 10s;
+    animation: scale-in 3s ease-in-out backwards;
+    animation-delay: 1s;
 }
 
 .portrait-cutout-1 {
@@ -76,11 +83,11 @@ body {
     margin: 0;
     padding: 0;
     z-index: 4;
-    background-image: url("../assets/cutout-1-half.png");
+    background-image: url("../assets/cutout-1-quarter.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 1s ease;
-    animation-delay: 20s;
+    animation: scale-in 3s ease-in-out backwards;
+    animation-delay: 1.5s;
 }
 
 .portrait-cutout-2 {
@@ -90,11 +97,11 @@ body {
     margin: 0;
     padding: 0;
     z-index: 3;
-    background-image: url("../assets/cutout-2-half.png");
+    background-image: url("../assets/cutout-2-quarter.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 1s ease;
-    animation-delay: 30s;
+    animation: scale-in 3s ease-in-out backwards;
+    animation-delay: 2s;
 }
 
 .portrait-cutout-3 {
@@ -104,11 +111,11 @@ body {
     margin: 0;
     padding: 0;
     z-index: 2;
-    background-image: url("../assets/cutout-3-half.png");
+    background-image: url("../assets/cutout-3-quarter.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 1s ease;
-    animation-delay: 40s;
+    animation: scale-in 3s ease-in-out backwards;
+    animation-delay: 2.5s;
 }
 
 .portrait-cutout-4 {
@@ -118,11 +125,34 @@ body {
     margin: 0;
     padding: 0;
     z-index: 1;
-    background-image: url("../assets/cutout-4-half.png");
+    background-image: url("../assets/cutout-4-quarter.png");
     background-size: cover;
     background-position: center;
-    animation: scale-up 10s ease;
-    animation-delay: 5s;
+    animation: scale-in 3s ease-in-out backwards;
+    animation-delay: 3s;
+}
+
+/* Hero Text */
+.hero-text {
+    width: 40%;
+    margin: 0;
+    padding: 1rem;
+    z-index: 100;
+}
+
+.hero-text img{
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.hero-text iframe{
+    width: 80%;
+    aspect-ratio: 16/9;
+    margin: 0;
+    padding: 1rem;
+    border: 0;
+    border-radius: 1rem;
 }
 
 /* Footer */
