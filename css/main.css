@@ -13,7 +13,6 @@ html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    overflow: hidden;
 }
 
 body {
@@ -25,12 +24,12 @@ body {
 @keyframes scale-in {
     0% {
         transform: scale(0);
-        padding-bottom: -50%;
+        padding-top: 50%;
     }
 
     75% {
         transform: scale(1.1);
-        padding-bottom: -50%;
+        padding-top: 0;
     }
 
     100% {
@@ -134,10 +133,9 @@ body {
 
 /* Hero Text */
 .hero-text {
-    width: 40%;
-    margin: 0;
+    width: 100%;
+    margin: auto;
     padding: 1rem;
-    z-index: 100;
 }
 
 .hero-text img{
@@ -147,12 +145,35 @@ body {
 }
 
 .hero-text iframe{
-    width: 80%;
+    width: 100%;
     aspect-ratio: 16/9;
     margin: 1rem;
     padding: 0;
     border: 0;
     border-radius: 2rem;
+}
+
+@media (min-width: 1080px) {
+    .hero-text {
+        width: 40%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .hero-text img{
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+
+    .hero-text iframe{
+        width: 80%;
+        aspect-ratio: 16/9;
+        margin: 1rem;
+        padding: 0;
+        border: 0;
+        border-radius: 2rem;
+    }
 }
 
 /* Footer */
