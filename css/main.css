@@ -298,27 +298,28 @@ body {
 
 .about-text {
     height: 100%;
-    width: 90%;
-    margin: 0;
+    width: 80%;
+    margin: auto;
     padding: 0;
     color: #2f615e;
 }
 
 .about-text h1 {
     margin: 0;
-    padding: 1rem;
+    padding: 0.5rem;
+    font-size: 3rem;
 }
 
 .about-text p {
     margin: 0;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .about-text a {
     display: block;
     height: 5rem;
     width: 100%;
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 0;
     text-align: center;
     line-height: 5rem;
@@ -347,7 +348,9 @@ a:active {
     background-image: url("https://eightmileseight.github.io/colonialcorner/assets/hero.jpg");
     background-size: cover;
     background-position: center;
-    background-color: #d07e0e
+    background-color: #d07e0e;
+    border-radius: 0.5rem;
+    box-shadow: #931324 1rem 1rem, #d07e0e 2rem 2rem, #482c21 3rem 3rem, #2f615e 4rem 4rem;
 }
 
 @media (min-width: 1200px) {
@@ -363,6 +366,16 @@ a:active {
         height: 25rem;
         width: 40%;
         margin: 5%;
+        padding: 0;
+    }
+
+    .about-text h1 {
+        margin: 1rem;
+        padding: 0;
+    }
+
+    .about-text p {
+        margin: 1rem;
         padding: 0;
     }
 }
