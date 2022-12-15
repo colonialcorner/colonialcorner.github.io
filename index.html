@@ -7,7 +7,6 @@
     <meta name="author" content="MHS Broadcasting Club">
     <link rel="shortcut icon" href="https://eightmileseight.github.io/colonialcorner/assets/icon.png" >
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
 </head>
 <body>
 
@@ -31,6 +30,7 @@
     <div class="s-about-content">
         <div class="about-text">
             <h1>Season 13</h1>
+            <div class="live-dot"></div>
             <p>Colonial Corner is Morristown High School's television show which is produced in its entirety by students.
                 Originally airing on Cablevision channel 77 and later over classroom television sets during a one-hour AEP block,
                 Colonial Corner made a switch to a YouTube-only platform in 2010.
@@ -39,10 +39,52 @@
                 with host segments in between to introduce them.
                 An opening sequence, bumpers, and credits help to define the show.
             </p>
-            <a href="https://youtube.com/colonialcorner">YouTube</a>
+            <a href="https://youtube.com/colonialcorner" target="_blank">YouTube</a>
         </div>
-        <div class="about-images"></div>
+        <div class="about-images animate-on-scroll"></div>
     </div>
 </section>
 </body>
+<script>
+    // Detect request animation frame
+    var scroll = window.requestAnimationFrame ||
+        // IE Fallback
+        function(callback){ window.setTimeout(callback, 1000/60)};
+    var elementsToShow = document.querySelectorAll('.animate-on-scroll');
+
+    function loop() {
+
+        Array.prototype.forEach.call(elementsToShow, function(element){
+            if (isElementInViewport(element)) {
+                element.classList.add('is-visible');
+            } else {
+                element.classList.remove('is-visible');
+            }
+        });
+
+        scroll(loop);
+    }
+
+    // Call the loop for the first time
+    loop();
+
+    // Helper function from: http://stackoverflow.com/a/7557433/274826
+    function isElementInViewport(el) {
+        // special bonus for those using jQuery
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+            el = el[0];
+        }
+        var rect = el.getBoundingClientRect();
+        return (
+            (rect.top <= 0
+                && rect.bottom >= 0)
+            ||
+            (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+            ||
+            (rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+        );
+    }
+</script>
 </html>
